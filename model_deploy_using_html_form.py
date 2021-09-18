@@ -24,4 +24,4 @@ def tumor_predict():
        return render_template('index.html' , prediction_text = "tumor is malignant , it will spread")
         
 if __name__ =='__main__':
-    app.run(port = 5555 , debug = True)
+    app.run(debug = True)
