@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title> ML API </title>
+
+<link rel="stylesheet" href="{{url_for('static' , filename='css/style.css')}}">
+
+</head>
+
+
+<body>
+<div class="login">
+
+<h1> Predict Type of Cancer </h1>
+
+<form action="{{url_for('tumor_predict')}}" method="post">
+<input type="text" name="mean_radius" placeholder="Mean Radius" required="required">
+<input type="text" name="mean_texture" placeholder="Mean Texture" required="required">
+<input type="text" name="mean_perimeter" placeholder="Mean Perimeter" required="required">
+<input type="text" name="mean_area" placeholder="Mean Area" required="required">
+<input type="text" name="mean_smoothness" placeholder="Mean Smoothness" required="required">
+
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+</form>
+<br>
+<br>
+
+{{ prediction_text }}
+
+</div>
+</body>
+</html>
