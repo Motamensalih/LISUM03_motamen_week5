@@ -33,4 +33,4 @@ def tumor_predict():
        return jsonify({'result': 'tumor is malignant , it will spread'})
         
 if __name__ =='__main__':
-    app.run(port = 5000 , debug = True)
+    app.run( debug = True)
